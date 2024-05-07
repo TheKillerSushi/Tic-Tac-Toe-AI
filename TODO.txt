@@ -1,0 +1,36 @@
+DAY 1: Create basic version of game
+
+
+DOCS:
+
+    CLASSES:
+
+        GAME - 
+            Initalization requires no inputs but does set the turn counter to 0 and the board to be blank
+            
+            description - This class creates the game board itself not including 
+                          the AI but instead handling and delivering the game state
+                          to the player and AI
+    FUNCTIONS:
+        shift_board(self,move=[0<=integer<=2, 0<=integer<=2]) -
+            inputs are self and a list containing 2 values -
+                both ints in second input are greater than / equal to 0 and are less than / equal to 2
+
+            description - uses coordinates to set a square either to 1(X) or 0(O)
+
+            return values - 1 if the square has not been changed or if the square does not exist
+                            0 if a square on self.board has been successfully changed
+                            -1 if the game is over
+        check_wins(self) - 
+            input value is self
+
+            description - checks if their is a winning state on the board
+
+            return values - 0 if a win exists
+                            1 if now win exists
+        get_board(self, write_board=False) -
+            input value is self and write_board, a True/False value that decides whether the board should print or jsut return
+
+            description - prints visually nice version of board
+
+            return value - self.board so that the AI may use it
